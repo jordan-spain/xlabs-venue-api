@@ -4,6 +4,9 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Newtonsoft.Json;
+using XLabs.Venue.Api.Configuration;
+using XLabs.Venue.Api.DataAccess;
+using XLabs.Venue.Api.DataAccess.Interfaces;
 
 namespace XLabs.Venue.Api
 {
@@ -32,6 +35,10 @@ namespace XLabs.Venue.Api
                     NullValueHandling = NullValueHandling.Ignore
                 };
             });
+
+            services.Configure<DataAccessOptions>(Configuration.GetSection("DataAccess"));
+
+            services.AddSingleton<IVenueRepository, FileBasedVenueRepository>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

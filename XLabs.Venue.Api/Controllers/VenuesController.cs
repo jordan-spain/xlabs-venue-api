@@ -1,5 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc;
-using XLabs.Venue.Api.Models;
+using System;
+using XLabs.Venue.Api.DataAccess.Interfaces;
 
 namespace XLabs.Venue.Api.Controllers
 {
@@ -7,22 +8,19 @@ namespace XLabs.Venue.Api.Controllers
     [Route("[controller]")]
     public class VenuesController : ControllerBase
     {
+        private readonly IVenueRepository _venueRepository;
+
+        public VenuesController(IVenueRepository venueRepository)
+        {
+            _venueRepository = venueRepository ?? throw new ArgumentNullException(nameof(venueRepository));
+        }
+
         [HttpGet]
         public IActionResult Get()
         {
-            return Ok(new[] { new VenueResponse
-            {
-                Id = 1,
-                Name = "Almost Famous",
-                Excerpt = "Here's something new to Leeds: an ultra-cool burger bar.",
-                Img = "http://leedsbeer.info/wp-content/uploads/2014/08/IMG_20140826_174337.jpg",
-                Address = "23-25 Great George St, Leeds LS1 3AL",
-                BeerRating = 3,
-                AtmosphereRating = 4.5,
-                AmenitiesRating = 3,
-                ValueRating = 3,
-                Tags = new [] { "food" }
-            }});
+            var venues = _venueRepository.GetAll();
+
+            return Ok(venues);
         }
     }
 }

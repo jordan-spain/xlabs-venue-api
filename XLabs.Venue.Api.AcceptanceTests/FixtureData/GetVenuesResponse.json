@@ -1,14 +1,51 @@
 ﻿[
   {
     "id": 1,
-    "name": "Almost Famous",
-    "excerpt": "Here's something new to Leeds: an ultra-cool burger bar.",
-    "img": "http://leedsbeer.info/wp-content/uploads/2014/08/IMG_20140826_174337.jpg",
-    "address": "23-25 Great George St, Leeds LS1 3AL",
-    "beerRating": 3,
-    "atmosphereRating": 4.5,
-    "amenitiesRating": 3,
-    "valueRating": 3,
-    "tags": [ "food" ]
+    "name": "...escobar",
+    "excerpt": "...It's really dark in here!",
+    "img": "http://leedsbeer.info/wp-content/uploads/2012/11/20121129_185815.jpg",
+    "address": "23-25 Great George Street, Leeds LS1 3BB",
+    "beerRating": 2.0,
+    "atmosphereRating": 3.0,
+    "amenitiesRating": 3.0,
+    "valueRating": 3.0,
+    "tags": [
+      "food",
+      "live music",
+      "sofas"
+    ]
+  },
+  {
+    "id": 2,
+    "name": "\"Golf\" Cafe Bar",
+    "excerpt": "FORE! You can play \"golf\" here and enjoy a nice bottled ale. ",
+    "img": "http://leedsbeer.info/wp-content/uploads/2013/04/20130422_204442.jpg",
+    "address": "1 Little Neville Street, Granary Wharf, Leeds LS1 4ED",
+    "beerRating": 2.5,
+    "atmosphereRating": 2.5,
+    "amenitiesRating": 3.5,
+    "valueRating": 2.5,
+    "tags": [
+      "beer garden",
+      "coffee",
+      "food",
+      "free wifi",
+      "sports"
+    ]
+  },
+  {
+    "id": 3,
+    "name": "115 The Headrow",
+    "excerpt": "A bar that lives up to its name.",
+    "img": "http://leedsbeer.info/wp-content/uploads/2014/10/115.jpg",
+    "address": "115 The Headrow, Leeds, LS1 5JW",
+    "beerRating": 1.5,
+    "atmosphereRating": 3.0,
+    "amenitiesRating": 2.5,
+    "valueRating": 2.0,
+    "tags": [
+      "coffee",
+      "food"
+    ]
   }
 ]
