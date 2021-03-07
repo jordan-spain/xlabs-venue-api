@@ -1,0 +1,18 @@
+﻿{
+  "id": 2,
+  "name": "\"Golf\" Cafe Bar",
+  "excerpt": "FORE! You can play \"golf\" here and enjoy a nice bottled ale. ",
+  "img": "http://leedsbeer.info/wp-content/uploads/2013/04/20130422_204442.jpg",
+  "address": "1 Little Neville Street, Granary Wharf, Leeds LS1 4ED",
+  "beerRating": 2.5,
+  "atmosphereRating": 2.5,
+  "amenitiesRating": 3.5,
+  "valueRating": 2.5,
+  "tags": [
+    "beer garden",
+    "coffee",
+    "food",
+    "free wifi",
+    "sports"
+  ]
+}

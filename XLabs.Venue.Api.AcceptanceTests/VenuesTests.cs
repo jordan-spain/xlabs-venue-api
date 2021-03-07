@@ -26,6 +26,23 @@ namespace XLabs.Venue.Api.AcceptanceTests
             Assert.True(MatchesExpectedResponse(response, Payloads.GetVenuesResponse()));
         }
 
+        [Fact]
+        public async Task Get_single_venue_returns_404_when_id_not_recognised()
+        {
+            var response = await _fixture.HttpGetAsync("/venues/232");
+
+            Assert.Equal(HttpStatusCode.NotFound, response.StatusCode);
+        }
+
+        [Fact]
+        public async Task Get_single_venue_returns_200_with_expected_content()
+        {
+            var (statusCode, response) = await _fixture.HttpGetAsyncWithStatus<JToken>("/venues/2");
+
+            Assert.Equal(HttpStatusCode.OK, statusCode);
+            Assert.True(MatchesExpectedResponse(response, Payloads.GetVenueResponse()));
+        }
+
         private bool MatchesExpectedResponse(JToken response, string expected)
         {
             var expectedJson = JToken.Parse(expected);

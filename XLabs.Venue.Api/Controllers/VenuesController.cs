@@ -16,11 +16,22 @@ namespace XLabs.Venue.Api.Controllers
         }
 
         [HttpGet]
-        public IActionResult Get()
+        public IActionResult GetAllVenues()
         {
             var venues = _venueRepository.GetAll();
 
             return Ok(venues);
+        }
+
+        [HttpGet("{id}")]
+        public IActionResult GetVenue(int id)
+        {
+            var venue = _venueRepository.Get(id);
+
+            if (venue == null)
+                return NotFound();
+
+            return Ok(venue);
         }
     }
 }

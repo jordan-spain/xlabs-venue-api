@@ -23,6 +23,9 @@ namespace XLabs.Venue.Api.AcceptanceTests.Infrastructure
             return (response.StatusCode, content);
         }
 
+        public async Task<HttpResponseMessage> HttpGetAsync(string url) => await _appClient.GetAsync(url);
+
+
         public void Dispose()
         {
             _appFactory.Dispose();

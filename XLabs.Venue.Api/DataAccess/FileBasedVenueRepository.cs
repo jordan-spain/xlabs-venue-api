@@ -4,6 +4,7 @@ using System;
 using System.Collections.Generic;
 using System.Globalization;
 using System.IO;
+using System.Linq;
 using XLabs.Venue.Api.Configuration;
 using XLabs.Venue.Api.DataAccess.Interfaces;
 using XLabs.Venue.Api.DataAccess.Models;
@@ -40,10 +41,7 @@ namespace XLabs.Venue.Api.DataAccess
             _venues = mapped;
         }
 
-        public VenueModel Get(int key)
-        {
-            throw new NotImplementedException();
-        }
+        public VenueModel Get(int key) => _venues.FirstOrDefault(record => record.Id == key);
 
         public IEnumerable<VenueModel> GetAll() => _venues;
 
