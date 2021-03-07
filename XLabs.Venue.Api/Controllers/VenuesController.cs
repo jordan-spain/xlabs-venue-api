@@ -10,7 +10,7 @@ namespace XLabs.Venue.Api.Controllers
         [HttpGet]
         public IActionResult Get()
         {
-            return Ok(new VenueResponse
+            return Ok(new[] { new VenueResponse
             {
                 Id = 1,
                 Name = "Almost Famous",
@@ -21,8 +21,8 @@ namespace XLabs.Venue.Api.Controllers
                 AtmosphereRating = 4.5,
                 AmenitiesRating = 3,
                 ValueRating = 3,
-                Tags = new [] { "food" } 
-            });
+                Tags = new [] { "food" }
+            }});
         }
     }
 }

@@ -9,6 +9,8 @@ namespace XLabs.Venue.Api
 {
     public class Startup
     {
+        private const string CorsPolicyName = "CorsPolicy";
+
         public Startup(IConfiguration configuration)
         {
             Configuration = configuration;
@@ -19,6 +21,9 @@ namespace XLabs.Venue.Api
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+            services.AddCors(options => options.AddPolicy(CorsPolicyName,
+                builder => builder.AllowAnyMethod().AllowAnyHeader().WithOrigins("http://localhost:3000")));
+
             services.AddControllers().AddNewtonsoftJson(options =>
             {
                 options.SerializerSettings.NullValueHandling = NullValueHandling.Ignore;
@@ -32,6 +37,8 @@ namespace XLabs.Venue.Api
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
         {
+            app.UseCors(CorsPolicyName);
+
             if (env.IsDevelopment())
             {
                 app.UseDeveloperExceptionPage();

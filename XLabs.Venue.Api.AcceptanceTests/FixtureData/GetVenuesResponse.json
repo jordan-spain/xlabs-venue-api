@@ -1,12 +1,14 @@
-﻿{
-  "id": 1,
-  "name": "Almost Famous",
-  "excerpt": "Here's something new to Leeds: an ultra-cool burger bar.",
-  "img": "http://leedsbeer.info/wp-content/uploads/2014/08/IMG_20140826_174337.jpg",
-  "address": "23-25 Great George St, Leeds LS1 3AL",
-  "beerRating": 3,
-  "atmosphereRating": 4.5,
-  "amenitiesRating": 3,
-  "valueRating": 3,
-  "tags": [ "food" ]
-}
+﻿[
+  {
+    "id": 1,
+    "name": "Almost Famous",
+    "excerpt": "Here's something new to Leeds: an ultra-cool burger bar.",
+    "img": "http://leedsbeer.info/wp-content/uploads/2014/08/IMG_20140826_174337.jpg",
+    "address": "23-25 Great George St, Leeds LS1 3AL",
+    "beerRating": 3,
+    "atmosphereRating": 4.5,
+    "amenitiesRating": 3,
+    "valueRating": 3,
+    "tags": [ "food" ]
+  }
+]
